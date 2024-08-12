@@ -16,6 +16,13 @@
         <div class="info">
           <a href="#" class="d-block">{{Auth::user()->name}}</a>
         </div>
+
+        <form action="{{route('logout')}}" method="post" class="ml-5">
+            @csrf
+            <button class="btn btn-primary btn-xs">
+                <img src="{{asset('sign-out-alt.png')}}" alt="" srcset="" style="width : 15px; aspect-ratio : square;" >
+            </button>
+        </form>
       </div>
 
       <!-- Sidebar Menu -->
